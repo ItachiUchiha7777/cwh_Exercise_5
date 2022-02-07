@@ -1,0 +1,1 @@
+ ask = int ( input ( "type 1 to choose Diet, type 2 to choose exercise  " ) )
