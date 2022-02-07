@@ -32,11 +32,10 @@ elif name == 1 :
     person_name = clients[1]
 elif name == 2 :
     person_name = clients[2]
-
-enter_or_retrieve = input ( " type 1 to input data, type 2 if u want to retrieve data" )
+ask = int ( input ( "type 1 to choose Diet, type 2 to choose exercise  " ) )
+enter_or_retrieve = int(input ( " type 1 to input data, type 2 if u want to retrieve data" ))
 
 if enter_or_retrieve == 1 :
-    ask = int ( input ( "type 1 to choose Diet, type 2 to choose exercise  " ) )
     if ask == 1 and 1 == name :
 
         shrey_diet = open ( "shrey_diet.txt" , 'a' )
@@ -66,7 +65,7 @@ if enter_or_retrieve == 1 :
         Ishan_diet.write ( f"time: [{time}] " + '\n' )
         Ishan_diet.close ()
 
-    if ask == 2 and 1 == name :
+    elif ask == 2 and 1 == name :
         shrey_ecrcise = open ( "shrey_ecrcise" , "a" )
         kya_kia = input ( "which ecxercise u did u fat pig?" )
         getdate ()
@@ -86,16 +85,15 @@ if enter_or_retrieve == 1 :
         Itachi_exercsie.close ()
     elif ask == 2 and 2 == name :
         ishan_excercise = open ( "ishan_excercise.txt" , 'a' )
-        kya_kia = input ( "what did u ate u fat pig?" )
+        kya_kia = input ( "which exercise u did u fat pig?" )
         getdate ()
         time = getdate ()
 
-        ishan_excercise.write ( "Exercise name: " + kya_khaya + ' at ' )
+        ishan_excercise.write ( "Exercise name: " + kya_kia + ' at ' )
         ishan_excercise.write ( f"time: [{time}] " + '\n' )
         ishan_excercise.close ()
-
+    print('sorry wrong input plese try again')
 elif enter_or_retrieve == 2 :
-    ask = int ( input ( "type 1 to choose Diet, type 2 to choose exercise  " ) )
     if ask == 1 and 0 == name :
 
         shrey_diet = open ( "shrey_diet.txt" )
@@ -131,6 +129,9 @@ elif enter_or_retrieve == 2 :
 
         print ( ishan_excercise.read )
         ishan_excercise.close ()
+    else:
+        print('sorry wrong input plese try again')
+print('sorry wrong input plese try again')
 
 # ask_choice = int ( input ("enter 1 to lock data, enter 2 to retrive data"))
 
